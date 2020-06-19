@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     animation: `$scale 0.5s ease forwards`,
     background: props => {
       const {isUser} = props;
-      return isUser ? "#b0e7c9" : "#6ca9ba"
+      return isUser ? "#6ed687" : "#3f9bfd"
     },
     margin: props => {
       const {isFirst, isUser} = props;

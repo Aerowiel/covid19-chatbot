@@ -41,6 +41,9 @@ if (!isDev && cluster.isMaster) {
   // Priority serve any static files.
   app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
 
+  // routes
+  require("./routes/covid.routes")(app);
+
   const server = http.createServer(app)
 
   server.listen(PORT, function () {

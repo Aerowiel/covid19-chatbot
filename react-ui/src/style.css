@@ -5,3 +5,9 @@ html, body, div#root {
 body {
   font-size: calc(14px + (26 - 14) * ((100vw - 320px) / (2560 - 320))) !important;
 }
+
+input[type="checkbox"]{
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}

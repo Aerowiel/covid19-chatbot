@@ -1,11 +1,12 @@
 import React from "react";
 
 import {makeStyles} from "@material-ui/core/styles";
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles(theme => ({
-  footer: {
+  input: {
     border: 0,
-    borderRadius: "0 0 10px 10px",
     borderTop: "thin solid #eee",
     boxShadow: "none",
     boxSizing: "border-box",
@@ -28,15 +29,60 @@ const ChatBotInput = (props) => {
   const {
     color,
     hasButton,
+    autoComplete,
+    value,
+    options,
+    onChange,
+    inputLabel,
+    onSubmit,
     ...other
   } = props;
 
   const classes = useStyles({color, hasButton})
 
-  return (
-    <input className={classes.footer} {...other}>
+  // React.useEffect(() => {
+  //   const input = document.getElementById("input");
+  //
+  //   input.addEventListener('beforeinput', checkIfEnterKeyHasBeenPressed);
+  // }, [])
+  //
+  // const checkIfEnterKeyHasBeenPressed = (ev) => {
+  //   const code = ev.keyCode || ev.which;
+  //   if(code !== 13) return;
+  //   onSubmit();
+  // }
 
-    </input>
+  return (
+
+    options ? (
+      <Autocomplete
+        freeSolo
+        disableClearable
+        options={options}
+        onChange={(event, newValue) => onChange({target: {value: newValue}})}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            id="input"
+            label={inputLabel}
+            variant="filled"
+            onChange={onChange}
+          />
+        )}
+      />
+    ) : (
+      <TextField
+        fullWidth
+        id="input"
+        label={inputLabel}
+        variant="filled"
+        value={value}
+        onChange={onChange}
+
+      />
+    )
+
+
   )
 }
 

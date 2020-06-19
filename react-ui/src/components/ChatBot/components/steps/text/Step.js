@@ -8,6 +8,7 @@ import Avatar from "./Avatar";
 import Loading from "../../../common/Loading";
 
 import DoctorIcon from "../../../icons/Doctor";
+import PatientIcon from "../../../icons/Patient";
 
 
 const TextStep = (props) => {
@@ -19,7 +20,7 @@ const TextStep = (props) => {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, isUser ? 1000 : 2000)
+    }, isUser ? 100 : 200)
   }, [])
 
   React.useEffect(() => {
@@ -39,7 +40,7 @@ const TextStep = (props) => {
         ) : isUser && (
           <AvatarContainer isUser>
             <Avatar
-              avatar={DoctorIcon}
+              avatar={PatientIcon}
             />
           </AvatarContainer>
         )

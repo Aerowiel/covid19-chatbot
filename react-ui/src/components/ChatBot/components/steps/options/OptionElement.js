@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   },
   optionElement: {
     cursor: "pointer",
-    background:  "#6ca9ba",
+    background:  "#3f9bfd",
     border: "medium solid #1c6a80",
     borderRadius: "25%",
     boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.15)",
