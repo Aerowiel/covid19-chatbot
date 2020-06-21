@@ -32,7 +32,7 @@ if (!isDev && cluster.isMaster) {
   }));
 
   // protection against vulnerabilities
-  app.use(helmet());
+  // app.use(helmet());
 
   // encode args
   app.use(bodyParser.json());
