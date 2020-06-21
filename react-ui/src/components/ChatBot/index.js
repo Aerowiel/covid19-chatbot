@@ -300,7 +300,7 @@ const ChatBot = (props) => {
     if(step.trigger && step.type !== "options" && step.type !== "input"){
       if(step.trigger === "END"){
         const formatedJson = getFormatedJson(answers);
-        axios.post("https://chat-bot-covid19.herokuapp.com/", formatedJson) //https://chat-bot-covid19.herokuapp.com/
+        axios.post("https://chat-bot-covid19.herokuapp.com/api/covid/predict", formatedJson) //https://chat-bot-covid19.herokuapp.com/
         .then(response => {
 
           const total = response.data;
