@@ -13,7 +13,7 @@ import PatientIcon from "../../../icons/Patient";
 
 const TextStep = (props) => {
 
-  const {isUser, isFirst, message} = props;
+  const {isUser, isFirst, message, isFinal, borderColor} = props;
 
   const [loading, setLoading] = React.useState(true)
 
@@ -48,6 +48,8 @@ const TextStep = (props) => {
       <TextBubble
         isUser={isUser}
         isFirst={isFirst}
+        isFinal={isFinal}
+        borderColor={borderColor}
       >
         {loading ? <Loading /> : message}
       </TextBubble>

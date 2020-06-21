@@ -1,6 +1,8 @@
 import React from "react";
+import {makeStyles} from "@material-ui/core/styles";
 
 import FormGroup from "@material-ui/core/FormGroup";
+import Button from "@material-ui/core/Button";
 
 import Option from "./Option";
 import OptionElement from "./OptionElement";
@@ -11,9 +13,28 @@ import Loading from "../../../common/Loading";
 import Checkbox from "./Checkbox";
 import Checkboxes from "./Checkboxes";
 
+const useStyles = makeStyles(theme => ({
+  "@keyframes scale":{
+    "0%": {
+      transform: "scale(0)"
+    },
+    "100%": {
+      transform: "scale(1)"
+    }
+  },
+  button: {
+    animation: "$scale 0.3s ease forwards",
+    color: "white",
+
+
+  }
+}))
+
 const OptionsStep = (props) => {
 
   const {question, options, trigger, onClick, multiple, visible} = props;
+
+  const classes = useStyles();
 
   const [loading, setLoading] = React.useState(true);
 
@@ -107,8 +128,6 @@ const OptionsStep = (props) => {
     let count = 0;
     const message = Object.keys(checkedItems).reduce((msg, key) => {
       const isLast = Object.keys(checkedItems).filter(key => checkedItems[key].value).length - 1 === count;
-      console.log(Object.keys(checkedItems).filter(key => checkedItems[key].value).length)
-      console.log(count)
       if(checkedItems[key].value) count += 1;
       return msg += checkedItems[key].value ?  `${checkedItems[key].label}${isLast ? "." : ", "}` : "";
     }, "")
@@ -127,7 +146,7 @@ const OptionsStep = (props) => {
             <Checkboxes>
               {options.map(option => renderCheckbox(option))}
             </Checkboxes>
-            <button onClick={onSubmit}>Valider</button>
+            <Button className={classes.button} variant="contained" color="secondary" disabled={Object.keys(checkedItems).filter(item => checkedItems[item].value).length === 0} onClick={onSubmit}>Valider ma sélection</Button>
           </>
 
         ) : (

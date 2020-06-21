@@ -5,7 +5,7 @@ import {makeStyles} from "@material-ui/core/styles";
 const useStyles = makeStyles(theme => ({
   header: {
     alignItems: "center",
-    background: props => props.background || "#baafb9",
+    background: props => props.background || "#48667e",
     color: props => props.color || "white",
     display: "flex",
     fill: props => props.fill || "black",

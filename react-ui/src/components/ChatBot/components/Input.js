@@ -21,6 +21,10 @@ const useStyles = makeStyles(theme => ({
       background: "#fff",
     }
 
+  },
+  inputRoot: {
+    background: "#e5e1e1",
+    border: "thin solid black",
   }
 }));
 
@@ -35,50 +39,51 @@ const ChatBotInput = (props) => {
     onChange,
     inputLabel,
     onSubmit,
+    error,
     ...other
   } = props;
 
   const classes = useStyles({color, hasButton})
 
-  // React.useEffect(() => {
-  //   const input = document.getElementById("input");
-  //
-  //   input.addEventListener('beforeinput', checkIfEnterKeyHasBeenPressed);
-  // }, [])
-  //
-  // const checkIfEnterKeyHasBeenPressed = (ev) => {
-  //   const code = ev.keyCode || ev.which;
-  //   if(code !== 13) return;
-  //   onSubmit();
-  // }
-
   return (
 
     options ? (
       <Autocomplete
-        freeSolo
         disableClearable
+        openOnFocus
+        freeSolo
         options={options}
         onChange={(event, newValue) => onChange({target: {value: newValue}})}
         renderInput={(params) => (
           <TextField
             {...params}
-            id="input"
+            onKeyPress={(e) => e.key === "Enter" && onSubmit()}
             label={inputLabel}
             variant="filled"
             onChange={onChange}
+            error={error.length > 0 ? true : false}
+            helperText={error}
           />
         )}
       />
     ) : (
       <TextField
         fullWidth
-        id="input"
+        onKeyPress={(e) => e.key === "Enter" && onSubmit()}
         label={inputLabel}
         variant="filled"
         value={value}
         onChange={onChange}
+        error={error.length > 0 ? true : false}
+        helperText={error}
+        InputProps={{
+          disableUnderline: true,
+          classes: {
+            root: classes.inputRoot,
 
+          },
+        }
+      }
       />
     )
 

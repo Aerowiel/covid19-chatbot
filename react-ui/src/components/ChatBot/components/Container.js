@@ -4,6 +4,8 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   container: {
+    display: "flex",
+    flexDirection: "column",
     background: props => props.background || "whitesmoke",
     borderRadius: props => props.borderRadius || "15px 15px 0 0",
     boxShadow: props => props.boxShadow || "0 12px 24px 0 rgba(0, 0, 0, 0.15)",

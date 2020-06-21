@@ -42,9 +42,9 @@ const rawTheme = createMuiTheme({
       dark: '#6ca9ba',
     },
     secondary: {
-      light: '#F22B11',
-      main: '#F22B11',
-      dark: '#F22B11',
+      light: '#3f9bfd',
+      main: '#3f9bfd',
+      dark: '#3f9bfd',
     },
     button: {
       light: "#F22B11",
