@@ -83,7 +83,7 @@ const ChatBot = (props) => {
 
 
   const [steps, setSteps] = React.useState([
-    {id:1, message: "Bonjour", type: "text", trigger:2},
+    {id:1, message: "Bonjour Matthieu Ryckman !", type: "text", trigger:2},
     {id:2, message: "Nous allons procéder à un diagnostic de vos symptômes, êtes-vous d'accord pour répondre à une série de questions ?", type:"options", question:"initial", options:[
       {value: true, label: "Oui", trigger:4},
       {value: false, label: "Non", trigger: 3}
