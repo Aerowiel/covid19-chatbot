@@ -20,7 +20,7 @@ const TextStep = (props) => {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, isUser ? 100 : 200)
+    }, isUser ? 1000 : 2000)
   }, [])
 
   React.useEffect(() => {
