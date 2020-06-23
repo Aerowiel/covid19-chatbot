@@ -1,9 +1,9 @@
 const scoring = {
   symptoms: {
 
-    fever: { score: 20, category: "mc" },
-    tired: { score: 20, category: "mc" },
-    dryCough: { score: 20, category: "mc" },
+    fever: { score: 25, category: "mc" },
+    tired: { score: 25, category: "mc" },
+    dryCough: { score: 25, category: "mc" },
 
     hardBreathing: { score: 40, category: "mh" },
     chestPain: { score: 40, category: "mh" },
