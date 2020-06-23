@@ -49,7 +49,7 @@ const OptionsStep = (props) => {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000)
+    }, 1000)
   }, [])
 
   React.useEffect(() => {

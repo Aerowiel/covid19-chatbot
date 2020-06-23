@@ -369,7 +369,7 @@ const ChatBot = (props) => {
       }else{
         setTimeout(() => {
           setCurrentStep(nextStep)
-        }, 2200)
+        }, 1200)
       }
 
     }
