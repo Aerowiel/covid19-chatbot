@@ -158,7 +158,7 @@ const ChatBot = (props) => {
       {label: "Non", value: 1, trigger: 16},
       {label: "Ne sais pas", value: 2, trigger: 16},
     ]},
-    {id: 16, message: "Veuillez patientez pendant que nous analysons vos réponses.", type:"text", trigger: "END"}
+    {id: 16, message: "Veuillez patienter pendant que nous analysons vos réponses.", type:"text", trigger: "END"}
   ])
 
   const [currentStep, setCurrentStep] = React.useState(steps[0]);

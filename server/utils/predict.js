@@ -96,8 +96,8 @@ const predict = (data) => {
     }
   })
 
-  scores.mc *= cumulatedMCSymptoms === 2 ? 1.25 :
-               cumulatedMCSymptoms === 3 ? 1.5 : 1;
+  scores.mc *= cumulatedMCSymptoms === 2 ? 1.4 :
+               cumulatedMCSymptoms === 3 ? 1.8 : 1;
 
   scores.mh *= cumulatedMHSymptoms === 2 ? 1.25 :
                cumulatedMHSymptoms === 3 ? 1.5 : 1;
