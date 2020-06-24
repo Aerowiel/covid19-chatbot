@@ -80,6 +80,7 @@ const predict = (data) => {
 
   // Symptoms
   symptoms.forEach(symptom => {
+    if(symptom === "none") return
     scores[scoring.symptoms[symptom].category] += scoring.symptoms[symptom].score;
     switch(scoring.symptoms[symptom].category){
       case "lc":

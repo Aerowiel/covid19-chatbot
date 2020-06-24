@@ -300,7 +300,7 @@ const ChatBot = (props) => {
     if(step.trigger && step.type !== "options" && step.type !== "input"){
       if(step.trigger === "END"){
         const formatedJson = getFormatedJson(answers);
-        axios.post("https://chat-bot-covid19.herokuapp.com/api/covid/predict", formatedJson) //https://chat-bot-covid19.herokuapp.com/
+        axios.post("https://chat-bot-covid19.herokuapp.com/api/covid/predict", formatedJson) //https://chat-bot-covid19.herokuapp.com/api/covid/predict
         .then(response => {
 
           const total = response.data;
@@ -360,7 +360,7 @@ const ChatBot = (props) => {
              )
            }
            const borderColor = total >= 0 && total <= 99 ? "#78d0b1" : total > 99 && total <= 199 ? "#f9da41" : "#ee596b";
-          const resultComponent = <TextStep key={`step_final`} message={prediction()} isFinal borderColor={borderColor} />
+          const resultComponent = <TextStep noDelay key={`step_final`} message={prediction()} isFinal borderColor={borderColor} />
           setRenderedSteps([...newRenderedSteps, {component:resultComponent, meta: {id: "final", type: "text", display: true}}])
         })
         .catch(error => {

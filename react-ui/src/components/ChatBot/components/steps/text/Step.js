@@ -13,14 +13,14 @@ import PatientIcon from "../../../icons/Patient";
 
 const TextStep = (props) => {
 
-  const {isUser, isFirst, message, isFinal, borderColor} = props;
+  const {isUser, isFirst, message, isFinal, borderColor, noDelay} = props;
 
   const [loading, setLoading] = React.useState(true)
 
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, isUser ? 500 : 1000)
+    }, noDelay ? 0 : isUser ? 500 : 1000)
   }, [])
 
   React.useEffect(() => {
