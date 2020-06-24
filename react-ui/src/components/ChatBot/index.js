@@ -317,7 +317,7 @@ const ChatBot = (props) => {
                   Si vous êtes porteurs de symptômes et que ces derniers persistent nous vous encourageons à vous rapprocher de votre médecin de proximité.
                   Continuez à appliquer les gestes barrières car le risque zéro n’existe pas.
 
-                  Merci également de noter que ces recommandations sont basées sur des données et ne remplace pas l’avis d’un professionnel de la santé.
+                  Merci également de noter que ces recommandations sont basées sur des données et ne remplacent pas l’avis d’un professionnel de la santé.
 
                   Dans tous les cas avant de vous rendre en zone médicale, veillez à prévenir de votre arrivée et de votre situation afin que les professionnels préparent les mesures sanitaires adéquates.`
                 }</div>
@@ -337,7 +337,7 @@ const ChatBot = (props) => {
 
                   Continuez à appliquer les gestes barrières, portez un masque et restez chez vous autant que possible en attente du verdict médical.
 
-                  Merci également de noter que ces recommandations sont basées sur des données et ne remplace pas l’avis d’un professionnel de la santé.`
+                  Merci également de noter que ces recommandations sont basées sur des données et ne remplacent pas l’avis d’un professionnel de la santé.`
                  }</div>
                </div>
              )
@@ -354,7 +354,7 @@ const ChatBot = (props) => {
 
                     Restez chez vous en attente de l’arrivée du corps médical et isolez-vous de vos proches, ces derniers sont encouragés à porter un masque et à rester également au domicile familial en attente du verdict médical.
 
-                    Merci également de noter que ces recommandations sont basées sur des données et ne remplace pas l’avis d’un professionnel de la santé.`
+                    Merci également de noter que ces recommandations sont basées sur des données et ne remplacent pas l’avis d’un professionnel de la santé.`
                  }</div>
                </div>
              )
